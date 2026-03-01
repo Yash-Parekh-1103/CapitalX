@@ -1,10 +1,10 @@
 'use server'
 
+import { NewStartup, Startup, startupTable } from "@/db/schema";
+import { db } from "..";
+
 
 // insert new Startup
-
-import { NewStartup, startupTable } from "@/db/schema";
-import { db } from "..";
 
 export const addNewStartup = async (data:NewStartup) => {
     
@@ -14,5 +14,17 @@ export const addNewStartup = async (data:NewStartup) => {
 
     return {msg: "newStartup Added Successfully"}
 
+    
+}
+
+// fetch all startup from db
+
+export const fetchAllStartup = async () => {
+    
+    const allstartup = await db.select().from(startupTable)
+     
+    console.log(allstartup);
+
+    return allstartup
     
 }
