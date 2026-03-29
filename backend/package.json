@@ -1,0 +1,17 @@
+{
+  "name": "backend",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+ "scripts": {
+  "start":"node dist/server.js",
+  "build":"npx tsc",
+  "dev":"nodemon server.ts"
+}
+,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.23.0"
+}
